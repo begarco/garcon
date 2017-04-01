@@ -1,0 +1,33 @@
+/* app css stylesheet */
+
+html {
+  background-color: #000000;
+  color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  background-color: #000000;
+  color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+}
+
+.logoHome {
+  max-width: 600px;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  height: 100%;
+}
+
+.one-page {
+  height: 100%;
+}
