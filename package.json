@@ -1,7 +1,7 @@
 {
   "name": "garcon.ovh",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.1.0",
   "description": "My personal website in AngularJS",
   "repository": "https://github.com/begarco/garcon",
   "license": "MIT",
