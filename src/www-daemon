@@ -1,4 +1,0 @@
-#!/bin/bash -e
-
-cd /srv/garcon;
-npm start >> /var/log/artemis/www/www.log;

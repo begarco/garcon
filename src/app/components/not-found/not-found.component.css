@@ -1,5 +1,11 @@
 .logo-error {
   max-height: 20em;
-  padding-left: 1em;
-  padding-right: 1em;
+}
+
+.error-band {
+  background-color: #222222;
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  align-items: center;
 }
