@@ -3,7 +3,8 @@ dist: trusty
 
 language: node_js
   node_js:
-    - '4.5'
+    - 4.5
+
 addons:
   ssh_known_hosts: artemis.garcon.ovh
 
@@ -21,7 +22,6 @@ before_script:
   - npm install
 
 script:
-  - npm run test-single-run
   - ng build -prod
 
 before_deploy:
