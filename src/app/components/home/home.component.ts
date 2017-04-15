@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  firstClick: boolean;
+  secondClick: boolean;
+
+  constructor() {
+    this.firstClick = false;
+    this.secondClick = false;
+  }
 
   ngOnInit():void {
 

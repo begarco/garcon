@@ -1,3 +1,35 @@
-<main class="main-home">
-  <img src="../../../assets/img/icon.png" alt="Benoît Garçon logo" class="logo-home img-responsive center-block" />
+<main class="main-home" *ngIf="!secondClick">
+  <img src="../../../assets/img/icon_bw.png" alt="Benoît Garçon logo" class="logo-home img-responsive" *ngIf="!firstClick" (click)="firstClick=true"/>
+  <img src="../../../assets/img/icon.png" alt="Benoît Garçon logo" class="logo-home" *ngIf="firstClick" (click)="secondClick=true"/>
 </main>
+
+<div *ngIf="secondClick">
+  <header class="bg-header">
+    <a routerLink="/home" class="bg-header-home">
+      <img src="../../../assets/img/icon.png" alt="Benoît Garçon logo" class="logo-header img-responsive"/>
+      <h1 class="bg-title hidden-xs">Benoît Garçon</h1>
+    </a>
+    <div class="bg-tools text-right">
+      <div class="header-search">
+        <form class="input-group">
+          <input type="text" class="form-control" placeholder="Search"/>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+        </form>
+      </div>
+      <div class="header-login">
+        <a routerLink="/home" class="input-group">
+          <span class="glyphicon glyphicon-log-in text-center"></span>
+        </a>
+      </div>
+      <div class="header-menu">
+        <a routerLink="/home" class="input-group">
+          <span class="glyphicon glyphicon-menu-hamburger text-center"></span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <img src="https://github.com/begarco/resources/raw/master/logo_bg_01.png" class="img-main">
+  </main>
+  <nav></nav>
+</div>
