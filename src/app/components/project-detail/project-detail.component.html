@@ -1,8 +1,15 @@
 <div *ngIf="project">
-  <h2>{{project?.title}} details!</h2>
-  <div><label>id: </label>{{project?.id}}</div>
-  <div>
-    <label>title: </label>
-    <input [(ngModel)]="project.title" placeholder="title"/>
-  </div>
+  <img src="{{project?.img}}" class="img-responsive text-center">
+  <h2>{{project?.title}}</h2>
+  <section>
+    <label>Description</label><p>{{project?.desc}}</p>
+    <label>Contributors</label>
+    <div>
+      <span *ngFor="let contributor of project.contributors">
+        <img src="{{contributor?.img}}" alt="{{contributor?.name}}" class="img-responsive" style="max-height: 64px">
+      </span>
+    </div>
+    <label>Links</label>
+    <p>Fork this project on GitHub: <a href="{{project?.url}}">{{project?.title}}</a> </p>
+  </section>
 </div>

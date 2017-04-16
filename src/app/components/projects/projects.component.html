@@ -1,9 +1,12 @@
-<h2>My Projects</h2>
-<ul class="projects">
-  <li *ngFor="let project of projects"
-      [class.selected]="project === selectedProject"
-      (click)="onSelect(project)">
-    <span class="badge">{{project?.id}}</span> {{project?.title}}
-  </li>
-</ul>
-<project-detail [project]="selectedProject"></project-detail>
+<main class="container">
+  <h2>My Projects</h2>
+  <accordion [closeOthers]="true">
+    <accordion-group *ngFor="let project of projects"
+                     [class.selected]="project === selectedProject"
+                     (click)="onSelect(project)"
+                     [panelClass]="custom"
+                     heading="{{project?.title}}">
+      <project-detail [project]="selectedProject"></project-detail>
+    </accordion-group>
+  </accordion>
+</main>

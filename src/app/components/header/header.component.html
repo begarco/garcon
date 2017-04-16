@@ -1,0 +1,32 @@
+<header class="bg-header">
+  <a routerLink="/home" class="bg-header-home">
+    <img src="../../../assets/img/icon.png" alt="Benoît Garçon logo" class="logo-header img-responsive"/>
+    <h3 class="bg-title hidden-xs hidden-sm">Benoît Garçon</h3>
+    <nav></nav>
+  </a>
+  <nav class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a routerLink="/benoit">About me</a></li>
+      <li><a routerLink="/projects">Projects</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="bg-tools text-right">
+    <div class="header-search">
+      <form class="input-group">
+        <input type="text" class="form-control" placeholder="Search"/>
+        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+      </form>
+    </div>
+    <div class="header-login">
+      <a routerLink="/home" class="input-group">
+        <span class="glyphicon glyphicon-log-in text-center"></span>
+      </a>
+    </div>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="header-menu">
+        <span class="glyphicon glyphicon-menu-hamburger text-center"></span>
+      </span>
+    </button>
+  </div>
+</header>

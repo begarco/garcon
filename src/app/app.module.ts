@@ -4,14 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
 import { CarouselModule } from 'ngx-bootstrap';
+import { AccordionModule } from 'ngx-bootstrap';
 
-import { AppComponent }        from './components/app/app.component';
-import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
-import { ProjectsComponent }     from './components/projects/projects.component';
-import { HomeComponent }     from './components/home/home.component';
-import { NotFoundComponent }     from './components/not-found/not-found.component';
-import { ProjectService }         from './services/project.service';
-import { AuthorService }         from './services/author.service';
+import { AppComponent }             from './components/app/app.component';
+import { ProjectDetailComponent }   from './components/project-detail/project-detail.component';
+import { ProjectsComponent }        from './components/projects/projects.component';
+import { HomeComponent }            from './components/home/home.component';
+import { HeaderComponent }          from './components/header/header.component';
+import { NotFoundComponent }        from './components/not-found/not-found.component';
+import { NotAllowedComponent }      from './components/not-allowed/not-allowed.component';
+import { ProjectService }           from './services/project.service';
+import { AuthorService }            from './services/author.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { AuthorService }         from './services/author.service';
     ProjectDetailComponent,
     ProjectsComponent,
     HomeComponent,
-    NotFoundComponent
+    HeaderComponent,
+    NotFoundComponent,
+    NotAllowedComponent
   ],
   imports: [
     BrowserModule,
@@ -39,12 +44,17 @@ import { AuthorService }         from './services/author.service';
         component: HomeComponent
       },
       {
+        path: 'rejected',
+        component: NotAllowedComponent
+      },
+      {
         path: '**',
         component: NotFoundComponent
       }
     ]),
     HttpModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    AccordionModule.forRoot()
   ],
   providers: [ProjectService, AuthorService],
   bootstrap: [AppComponent]

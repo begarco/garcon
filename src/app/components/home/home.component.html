@@ -1,96 +1,64 @@
-<main class="main-home" *ngIf="secondClick">
-  <img src="../../../assets/img/icon_bw.png" alt="Benoît Garçon logo" class="logo-home img-responsive" *ngIf="!firstClick" (click)="firstClick=true"/>
-  <img src="../../../assets/img/icon.png" alt="Benoît Garçon logo" class="logo-home img-responsive" *ngIf="firstClick" (click)="secondClick=true"/>
-</main>
-
-<div *ngIf="!secondClick">
-  <header class="bg-header">
-    <a routerLink="/home" class="bg-header-home">
-      <img src="../../../assets/img/icon.png" alt="Benoît Garçon logo" class="logo-header img-responsive"/>
-      <h3 class="bg-title hidden-xs">Benoît Garçon</h3>
-      <nav></nav>
-    </a>
-    <div class="bg-tools text-right">
-      <div class="header-search">
-        <form class="input-group">
-          <input type="text" class="form-control" placeholder="Search"/>
-          <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-        </form>
+<main class="container">
+  <carousel [interval]="5000">
+    <slide>
+      <img src="https://github.com/begarco/resources/raw/master/logo_bg_01.png" class="img-main" alt="Benoît Garçon site under construction">
+      <div class="caption">
+        <h3>Welcome to garcon.ovh</h3>
+        <p>This is my personal website where you can find my work and information about me.</p><br/><br/>
       </div>
-      <div class="header-login">
-        <a routerLink="/home" class="input-group">
-          <span class="glyphicon glyphicon-log-in text-center"></span>
-        </a>
+    </slide>
+    <slide>
+      <img src="https://github.com/begarco/resources/raw/master/logo_artemis_05.png" class="img-main" alt="Artemis project first draft">
+      <div class="caption">
+        <h3>Next main project</h3>
+        <p>The Artemis project is a new one combining web programming and deep learning.</p><br/><br/>
       </div>
-      <div class="header-menu">
-        <a routerLink="/home" class="input-group">
-          <span class="glyphicon glyphicon-menu-hamburger text-center"></span>
-        </a>
+    </slide>
+    <slide>
+      <img src="https://raw.githubusercontent.com/begarco/resources/master/logo_isima.png" class="img-main" alt="Third slide">
+      <div class="caption">
+        <h3>My previous ISIMA projects</h3>
+        <p>As a former ISIMA student, I produced different projects you can find here.</p><br/><br/>
       </div>
-    </div>
-  </header>
-  <main class="container">
-    <carousel [interval]="5000">
-      <slide>
-        <img src="https://github.com/begarco/resources/raw/master/logo_bg_01.png" class="img-main" alt="Benoît Garçon site under construction">
-        <div class="caption">
-          <h3>Welcome to garcon.ovh</h3>
-          <p>This is my personal website where you can find my work and information about me.</p><br/><br/>
+    </slide>
+  </carousel>
+  <div class="article-group text-center">
+    <article class="col-sm-6">
+      <img src="../../../assets/img/oim.png" class="img-circle" alt="Benoît Garçon">
+      <h1>Benoît <strong>Garçon</strong></h1>
+      <p>
+        I am passionate about computer engineering and am looking for a stimulating job in area close to my heart: space. I would like to work on a project which would be original and containing complex problems to solve.
+      </p>
+    </article>
+    <div class="col-sm-6 col-xs-12 project-group">
+      <article class="col-sm-offset-1 col-sm-11 col-xs-12">
+        <div class="img-project">
+          <img src="https://github.com/begarco/resources/raw/master/logo_artemis_sm_02.png" alt="Artemis">
         </div>
-      </slide>
-      <slide>
-        <img src="https://github.com/begarco/resources/raw/master/logo_artemis_05.png" class="img-main" alt="Artemis project first draft">
-        <div class="caption">
-          <h3>Next main project</h3>
-          <p>The Artemis project is a new one combining web programming and deep learning.</p><br/><br/>
+        <div class="project-desc">
+          <h2><strong>Artemis</strong></h2>
+          <p>The Artemis project is a new one combining web programming and deep learning.</p>
         </div>
-      </slide>
-      <slide>
-        <img src="https://raw.githubusercontent.com/begarco/resources/master/logo_isima.png" class="img-main" alt="Third slide">
-        <div class="caption">
-          <h3>My previous ISIMA projects</h3>
-          <p>As a former ISIMA student, I produced different projects you can find here.</p><br/><br/>
-        </div>
-      </slide>
-    </carousel>
-    <div class="article-group text-center">
-      <article class="col-sm-6">
-        <img src="../../../assets/img/oim.png" class="img-circle" alt="Benoît Garçon">
-        <h1>Benoît <strong>Garçon</strong></h1>
-        <p>
-          I am passionate about computer engineering and am looking for a stimulating job in area close to my heart: space. I would like to work on a project which would be original and containing complex problems to solve.
-        </p>
       </article>
-      <div class="col-sm-6 col-xs-12 project-group">
-        <article class="col-sm-offset-1 col-sm-11 col-xs-12">
-          <div class="img-project">
-            <img src="https://github.com/begarco/resources/raw/master/logo_artemis_sm_02.png" alt="Artemis">
-          </div>
-          <div class="project-desc">
-            <h2><strong>Artemis</strong></h2>
-            <p>The Artemis project is a new one combining web programming and deep learning.</p>
-          </div>
-        </article>
-        <article class="col-sm-offset-1 col-sm-11 col-xs-12">
-          <div class="img-project">
-            <img src="https://github.com/begarco/resources/blob/master/isima-begarco_white.png?raw=true" alt="ISIMA begarco">
-          </div>
-          <div class="project-desc">
-            <h2><strong>ISIMA</strong></h2>
-            <p>Different projects produced during my scholarship at <a href="http://www.isima.fr">ISIMA</a> in Clermont-Ferrand, France.</p>
-          </div>
-        </article>
-        <article class="col-sm-offset-1 col-sm-11 col-xs-12">
-          <div class="img-project">
-            <img src="https://avatars1.githubusercontent.com/u/22893853" alt="WatchDogZZ">
-          </div>
-          <div class="project-desc">
-            <h2><strong>WatchDogZZ</strong></h2>
-            <p>ISIMA project by BBS007 and begarco about a Marauder's Map mobile application.</p>
-          </div>
-        </article>
-      </div>
-
+      <article class="col-sm-offset-1 col-sm-11 col-xs-12">
+        <div class="img-project">
+          <img src="https://github.com/begarco/resources/blob/master/isima-begarco_white.png?raw=true" alt="ISIMA begarco">
+        </div>
+        <div class="project-desc">
+          <h2><strong>ISIMA</strong></h2>
+          <p>Different projects produced during my scholarship at <a href="http://www.isima.fr">ISIMA</a> in Clermont-Ferrand, France.</p>
+        </div>
+      </article>
+      <article class="col-sm-offset-1 col-sm-11 col-xs-12">
+        <div class="img-project">
+          <img src="https://avatars1.githubusercontent.com/u/22893853" alt="WatchDogZZ">
+        </div>
+        <div class="project-desc">
+          <h2><strong>WatchDogZZ</strong></h2>
+          <p>ISIMA project by BBS007 and begarco about a Marauder's Map mobile application.</p>
+        </div>
+      </article>
     </div>
-  </main>
-</div>
+
+  </div>
+</main>

@@ -1,0 +1,109 @@
+.bg-header {
+  height: 50px;
+  background-color: #222222;
+  display: flex;
+  width: 100%;
+  box-shadow: 0 1px 5px #444444;
+  align-items: center;
+}
+
+.logo-header {
+  max-height: 40px;
+  display: inline-block;
+  margin: 5px;
+  vertical-align: middle;
+}
+
+.bg-title {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  vertical-align: middle;
+}
+
+.bg-tools {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-login {
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+  width: 48px;
+}
+
+.header-menu {
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+  width: 48px;
+}
+
+.header-search {
+  display: flex;
+  vertical-align: middle;
+  width: 200px;
+}
+
+.input-group-addon {
+  background-color: #be0000;
+  color: #FFFFFF;
+}
+
+.bg-header-home {
+  color: white;
+  text-decoration: none;
+}
+
+.glyphicon-log-in {
+  font-size: 32px;
+  text-shadow: 0 0 10px #be0000;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.glyphicon-log-in:hover {
+  color: #be0000;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+.glyphicon-menu-hamburger {
+  font-size: 32px;
+  text-shadow: 0 0 10px #be0000;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.glyphicon-menu-hamburger:hover {
+  color: #be0000;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+.bg-tools button {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  color: #be0000;
+  text-decoration: none;
+}
+
+nav a {
+  color: #aaaaaa;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 1px #666666;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ffffff;
+  background: none;
+  text-shadow: 0 0 11px #be0000;
+}
