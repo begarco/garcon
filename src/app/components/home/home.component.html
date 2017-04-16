@@ -1,13 +1,14 @@
-<main class="main-home" *ngIf="!secondClick">
+<main class="main-home" *ngIf="secondClick">
   <img src="../../../assets/img/icon_bw.png" alt="Benoît Garçon logo" class="logo-home img-responsive" *ngIf="!firstClick" (click)="firstClick=true"/>
-  <img src="../../../assets/img/icon.png" alt="Benoît Garçon logo" class="logo-home" *ngIf="firstClick" (click)="secondClick=true"/>
+  <img src="../../../assets/img/icon.png" alt="Benoît Garçon logo" class="logo-home img-responsive" *ngIf="firstClick" (click)="secondClick=true"/>
 </main>
 
-<div *ngIf="secondClick">
+<div *ngIf="!secondClick">
   <header class="bg-header">
     <a routerLink="/home" class="bg-header-home">
       <img src="../../../assets/img/icon.png" alt="Benoît Garçon logo" class="logo-header img-responsive"/>
-      <h1 class="bg-title hidden-xs">Benoît Garçon</h1>
+      <h3 class="bg-title hidden-xs">Benoît Garçon</h3>
+      <nav></nav>
     </a>
     <div class="bg-tools text-right">
       <div class="header-search">
@@ -29,7 +30,28 @@
     </div>
   </header>
   <main class="container">
-    <img src="https://github.com/begarco/resources/raw/master/logo_bg_01.png" class="img-main">
+    <carousel [interval]="3000">
+      <slide>
+        <img src="https://github.com/begarco/resources/raw/master/logo_bg_01.png" class="img-main" alt="Benoît Garçon site under construction">
+        <div class="caption">
+          <h3>Welcome to garcon.ovh</h3>
+          <p>This is my personal website where you can find my work and information about me.</p><br/><br/>
+        </div>
+      </slide>
+      <slide>
+        <img src="https://github.com/begarco/resources/raw/master/logo_artemis_05.png" class="img-main" alt="Artemis project first draft">
+        <div class="caption">
+          <h3>Next main project</h3>
+          <p>The Artemis project is a new one combining web programming and deep learning.</p><br/><br/>
+        </div>
+      </slide>
+      <slide>
+        <img src="https://raw.githubusercontent.com/begarco/resources/master/logo_isima.png" class="img-main" alt="Third slide">
+        <div class="caption">
+          <h3>My previous ISIMA projects</h3>
+          <p>As a former ISIMA student, I produced different projects you can find here.</p><br/><br/>
+        </div>
+      </slide>
+    </carousel>
   </main>
-  <nav></nav>
 </div>

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule }   from '@angular/router';
+import { CarouselModule } from 'ngx-bootstrap';
 
 import { AppComponent }        from './components/app/app.component';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
@@ -42,7 +43,8 @@ import { AuthorService }         from './services/author.service';
         component: NotFoundComponent
       }
     ]),
-    HttpModule
+    HttpModule,
+    CarouselModule.forRoot()
   ],
   providers: [ProjectService, AuthorService],
   bootstrap: [AppComponent]
