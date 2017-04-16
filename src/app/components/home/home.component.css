@@ -105,5 +105,61 @@
   left: 0;
   padding: 1em;
   padding-bottom: 0;
-  background-color: rgba(34, 34, 34, 1);
+  background-color: rgba(128, 0, 0, 1);
+}
+
+slide {
+  background-color: #888888;
+}
+
+article {
+  border-bottom: solid 1px white;
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+article h1 {
+  border-bottom: solid 1px white;
+}
+
+article p {
+  text-align: justify;
+}
+
+.article-group {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.project-group {
+  padding: 0;
+}
+
+.project-group article {
+  text-align: justify;
+  display: flex;
+  flex-direction: row;
+}
+
+.project-group article:hover {
+  background-color: rgba(128, 0, 0, 1);
+}
+
+.project-desc {
+  display: inline-block;
+  margin-left: 1em;
+}
+
+.project-desc h2 {
+  margin-top: 0;
+}
+
+.img-project {
+  min-width: 96px;
+  max-width: 96px;
+  display: inline-block;
+}
+
+.img-project img {
+  max-width: 100%;
 }
