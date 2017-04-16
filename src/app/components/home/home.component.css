@@ -163,3 +163,7 @@ article p {
 .img-project img {
   max-width: 100%;
 }
+
+strong {
+  color: #be0000;
+}
